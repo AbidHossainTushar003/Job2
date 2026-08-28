@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC">
+
+
+    <!-- App Header -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:text="StuFo"
+        android:textColor="#0F766E"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:fontFamily="sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <!-- Search Bar -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_search"
+        android:elevation="3dp"
+        android:paddingStart="8dp"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search students..."
+        app:layout_constraintStart_toEndOf="@id/tvTitle"
+        app:layout_constraintEnd_toStartOf="@id/btnFilter"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"/>
+
+
+    <!-- Filter Button -->
+    <ImageButton
+        android:id="@+id/btnFilter"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_circle_button"
+        android:contentDescription="Sort Students"
+        android:padding="10dp"
+        android:src="@drawable/ic_filter_list"
+        app:tint="#0F766E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/searchView"
+        app:layout_constraintBottom_toBottomOf="@id/searchView"/>
+
+
+    <!-- Student RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        android:clipToPadding="false"
+        android:paddingBottom="100dp"
+
+        android:overScrollMode="never"
+
+        app:layout_constraintTop_toBottomOf="@id/searchView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        tools:listitem="@layout/item_profile"/>
+
+
+    <!-- Add Student Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+
+        android:layout_margin="24dp"
+
+        android:contentDescription="Add Student"
+
+        android:src="@drawable/ic_add"
+
+        android:elevation="8dp"
+
+        app:backgroundTint="#0F766E"
+        app:tint="@android:color/white"
+
+        app:fabCustomSize="60dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

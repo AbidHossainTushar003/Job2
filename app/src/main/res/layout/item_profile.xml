@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.google.android.material.card.MaterialCardView
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+
+
+    android:layout_margin="10dp"
+
+
+    app:cardCornerRadius="20dp"
+
+    app:cardElevation="4dp"
+
+    app:cardBackgroundColor="@android:color/white">
+
+
+
+
+
+    <LinearLayout
+
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+
+        android:orientation="horizontal"
+
+        android:gravity="center_vertical"
+
+
+        android:padding="18dp">
+
+
+
+
+
+        <LinearLayout
+
+
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+
+
+            android:layout_weight="1"
+
+
+            android:orientation="vertical">
+
+
+
+
+
+            <TextView
+
+
+                android:id="@+id/txtName"
+
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+
+                android:text="Abid Hossain"
+
+
+                android:textSize="20sp"
+
+
+                android:textStyle="bold"
+
+                android:textColor="#0F172A"/>
+
+
+
+
+
+
+            <TextView
+
+
+                android:id="@+id/txtEmail"
+
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+
+                android:text="example@gmail.com"
+
+
+                android:textSize="14sp"
+
+
+                android:layout_marginTop="5dp"
+
+                android:textColor="#64748B"/>
+
+
+
+
+
+            <TextView
+
+
+                android:id="@+id/txtMobile"
+
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+
+                android:text="017XXXXXXXX"
+
+
+                android:textSize="14sp"
+
+
+                android:layout_marginTop="5dp"
+
+                android:textColor="#64748B"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+        <ImageButton
+
+
+            android:id="@+id/btnEdit"
+
+
+            android:layout_width="42dp"
+
+            android:layout_height="42dp"
+
+
+            android:padding="10dp"
+
+
+            android:background="@drawable/bg_edit_button"
+
+
+            android:src="@drawable/ic_edit"
+
+            app:tint="#0F766E"
+
+            android:contentDescription="Edit"/>
+
+
+
+
+
+        <ImageButton
+
+
+            android:id="@+id/btnDelete"
+
+
+            android:layout_width="42dp"
+
+            android:layout_height="42dp"
+
+
+            android:layout_marginStart="10dp"
+
+
+            android:padding="10dp"
+
+
+            android:background="@drawable/bg_delete_button"
+
+
+            android:src="@drawable/ic_delete"
+
+            app:tint="#DC2626"
+
+            android:contentDescription="Delete"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

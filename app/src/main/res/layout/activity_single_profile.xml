@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+
+    android:background="#F8FAFC">
+
+
+
+    <com.google.android.material.card.MaterialCardView
+
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+
+        android:layout_margin="24dp"
+
+
+        app:cardCornerRadius="24dp"
+
+        app:cardElevation="6dp"
+
+        app:cardBackgroundColor="@android:color/white">
+
+
+
+
+
+        <LinearLayout
+
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+
+            android:orientation="vertical"
+
+            android:padding="24dp">
+
+
+
+
+
+            <TextView
+
+                android:id="@+id/tvName"
+
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+
+                android:text="Name"
+
+
+                android:textSize="26sp"
+
+                android:textStyle="bold"
+
+                android:textColor="#0F766E"/>
+
+
+
+
+
+
+            <TextView
+
+                android:id="@+id/tvEmail"
+
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+
+                android:text="Email"
+
+
+                android:textSize="17sp"
+
+
+                android:layout_marginTop="20dp"
+
+                android:textColor="#334155"/>
+
+
+
+
+
+            <TextView
+
+                android:id="@+id/tvDob"
+
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+
+                android:text="Date of Birth"
+
+
+                android:textSize="17sp"
+
+
+                android:layout_marginTop="12dp"
+
+                android:textColor="#334155"/>
+
+
+
+
+
+            <TextView
+
+                android:id="@+id/tvDistrict"
+
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+
+                android:text="District"
+
+
+                android:textSize="17sp"
+
+
+                android:layout_marginTop="12dp"
+
+                android:textColor="#334155"/>
+
+
+
+
+
+            <TextView
+
+                android:id="@+id/tvMobile"
+
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+
+                android:text="Mobile"
+
+
+                android:textSize="17sp"
+
+
+                android:layout_marginTop="12dp"
+
+                android:textColor="#334155"/>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</ScrollView>
