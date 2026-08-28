@@ -22,26 +22,40 @@ import com.example.job2.viewmodel.ProfileViewModelFactory
 import kotlinx.coroutines.launch
 
 
-
+/**
+ * Activity that displays a list of user profiles.
+ * Allows users to view, add, edit, or delete profiles.
+ */
 class ProfileListActivity : AppCompatActivity() {
 
 
-
+    /**
+     * View binding for the activity layout.
+     */
     private lateinit var binding:
             ActivityProfileListBinding
 
-
+    /**
+     * ViewModel for managing profile data.
+     */
     private lateinit var viewModel:
             ProfileViewModel
 
-
+    /**
+     * Adapter for the profile RecyclerView.
+     */
     private lateinit var adapter:
             ProfileAdapter
 
 
 
 
-
+    /**
+     * Called when the activity is starting.
+     * Initializes UI components, ViewModel, and sets up data observation.
+     *
+     * @param savedInstanceState If the activity is being re-initialized.
+     */
     override fun onCreate(
         savedInstanceState: Bundle?,
     ) {
