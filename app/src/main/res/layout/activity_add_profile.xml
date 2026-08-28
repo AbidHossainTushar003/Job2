@@ -75,7 +75,8 @@
 
                 android:layout_height="wrap_content"
 
-                android:hint="Name"/>
+                android:hint="Name"
+                android:textColor="@color/black"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,7 +103,8 @@
 
                 android:layout_height="wrap_content"
 
-                android:hint="Email"/>
+                android:hint="Email"
+                android:textColor="@color/black"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,7 +131,8 @@
 
                 android:layout_height="wrap_content"
 
-                android:hint="Date of Birth"/>
+                android:hint="Date of Birth"
+                android:textColor="@color/black"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -156,7 +159,8 @@
 
                 android:layout_height="wrap_content"
 
-                android:hint="District"/>
+                android:hint="District"
+                android:textColor="@color/black"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -185,7 +189,8 @@
 
                 android:hint="Mobile Number"
 
-                android:inputType="phone"/>
+                android:inputType="phone"
+                android:textColor="@color/black"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
