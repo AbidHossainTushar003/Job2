@@ -18,6 +18,6 @@ data class UserProfile(
 
     val district:String,
 
-    val mobile:String
+    val mobile:String,
 
 ): java.io.Serializable

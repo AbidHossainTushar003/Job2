@@ -10,14 +10,14 @@ import com.example.job2.data.repository.ProfileRepository
 
 class ProfileViewModelFactory(
 
-    private val repository: ProfileRepository
+    private val repository: ProfileRepository,
 
 ): ViewModelProvider.Factory {
 
 
 
     override fun <T : ViewModel> create(
-        modelClass: Class<T>
+        modelClass: Class<T>,
     ): T {
 
 
@@ -28,8 +28,9 @@ class ProfileViewModelFactory(
         ){
 
 
+            @Suppress("UNCHECKED_CAST")
             return ProfileViewModel(
-                repository
+                repository,
             ) as T
 
 
@@ -37,7 +38,7 @@ class ProfileViewModelFactory(
 
 
         throw IllegalArgumentException(
-            "Unknown ViewModel Class"
+            "Unknown ViewModel Class",
         )
 
     }

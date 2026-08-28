@@ -27,7 +27,7 @@ interface ProfileDao {
 
 
     @Query(
-        "SELECT * FROM profile_table ORDER BY id DESC"
+        "SELECT * FROM profile_table ORDER BY id DESC",
     )
     fun getAllProfiles():
             Flow<List<UserProfile>>
@@ -39,10 +39,10 @@ interface ProfileDao {
         SELECT * FROM profile_table
         WHERE name LIKE '%' || :search || '%'
         OR email LIKE '%' || :search || '%'
-        """
+        """,
     )
     fun searchProfile(
-        search:String
+        search:String,
     ):
             Flow<List<UserProfile>>
 

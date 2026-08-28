@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 
 class ProfileViewModel(
 
-    private val repository: ProfileRepository
+    private val repository: ProfileRepository,
 
 ) : ViewModel() {
 

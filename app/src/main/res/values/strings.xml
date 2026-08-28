@@ -4,4 +4,22 @@
 User Profile Registration
 </string>
 
+    <string name="total_profiles">Total Profiles : %d</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="save_profile">Save Profile</string>
+    <string name="profile_deleted">Profile Deleted</string>
+    <string name="profile_saved">Profile Saved</string>
+    <string name="profile_updated">Profile Updated</string>
+    <string name="add_profile">Add Profile</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="dob">Date of Birth</string>
+    <string name="district">District</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="fill_all_fields">Please fill all fields</string>
+    <string name="display_name">Name: %s</string>
+    <string name="display_email">Email: %s</string>
+    <string name="display_dob">Date of Birth: %s</string>
+    <string name="display_district">District: %s</string>
+    <string name="display_mobile">Mobile: %s</string>
 </resources>

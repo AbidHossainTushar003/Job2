@@ -12,7 +12,7 @@ import com.example.job2.data.model.UserProfile
 @Database(
     entities = [UserProfile::class],
     version = 1,
-    exportSchema = false
+    exportSchema = false,
 )
 
 abstract class ProfileDatabase:RoomDatabase(){

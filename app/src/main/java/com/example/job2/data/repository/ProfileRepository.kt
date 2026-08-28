@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 
 class ProfileRepository(
 
-    private val dao: ProfileDao
+    private val dao: ProfileDao,
 
 ){
 

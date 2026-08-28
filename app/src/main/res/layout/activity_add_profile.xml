@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
 
 
-            android:text="Add Profile"
+            android:text="@string/add_profile"
 
             android:textSize="26sp"
 
@@ -75,7 +75,8 @@
 
                 android:layout_height="wrap_content"
 
-                android:hint="Name"
+                android:hint="@string/name"
+                android:text=""
                 android:textColor="@color/black"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -103,7 +104,8 @@
 
                 android:layout_height="wrap_content"
 
-                android:hint="Email"
+                android:hint="@string/email"
+                android:text=""
                 android:textColor="@color/black"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -120,7 +122,8 @@
 
             android:layout_marginTop="12dp"
 
-            app:boxBackgroundMode="outline">
+            app:boxBackgroundMode="outline"
+            app:startIconDrawable="@drawable/ic_calendar">
 
 
             <com.google.android.material.textfield.TextInputEditText
@@ -131,7 +134,10 @@
 
                 android:layout_height="wrap_content"
 
-                android:hint="Date of Birth"
+                android:hint="@string/dob"
+                android:text=""
+                android:focusable="false"
+                android:clickable="true"
                 android:textColor="@color/black"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -159,7 +165,8 @@
 
                 android:layout_height="wrap_content"
 
-                android:hint="District"
+                android:hint="@string/district"
+                android:text=""
                 android:textColor="@color/black"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -187,7 +194,7 @@
 
                 android:layout_height="wrap_content"
 
-                android:hint="Mobile Number"
+                android:hint="@string/mobile_number"
 
                 android:inputType="phone"
                 android:textColor="@color/black"/>
@@ -211,7 +218,7 @@
             android:layout_height="55dp"
 
 
-            android:text="Save Profile"
+            android:text="@string/save_profile"
 
 
             android:layout_marginTop="30dp"

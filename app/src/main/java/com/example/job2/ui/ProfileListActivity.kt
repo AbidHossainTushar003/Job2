@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 
+import com.example.job2.R
 import com.example.job2.adapter.ProfileAdapter
 import com.example.job2.data.local.ProfileDatabase
 import com.example.job2.data.repository.ProfileRepository
@@ -42,7 +43,7 @@ class ProfileListActivity : AppCompatActivity() {
 
 
     override fun onCreate(
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ) {
 
         super.onCreate(savedInstanceState)
@@ -94,13 +95,13 @@ class ProfileListActivity : AppCompatActivity() {
                     val intent =
                         Intent(
                             this,
-                            AddProfileActivity::class.java
+                            AddProfileActivity::class.java,
                         )
 
 
                     intent.putExtra(
                         "profile",
-                        profile
+                        profile,
                     )
 
 
@@ -119,8 +120,8 @@ class ProfileListActivity : AppCompatActivity() {
 
                     Toast.makeText(
                         this,
-                        "Profile Deleted",
-                        Toast.LENGTH_SHORT
+                        getString(R.string.profile_deleted),
+                        Toast.LENGTH_SHORT,
                     ).show()
 
 
@@ -133,19 +134,19 @@ class ProfileListActivity : AppCompatActivity() {
                     val intent =
                         Intent(
                             this,
-                            SingleProfileActivity::class.java
+                            SingleProfileActivity::class.java,
                         )
 
 
                     intent.putExtra(
                         "profile",
-                        profile
+                        profile,
                     )
 
 
                     startActivity(intent)
 
-                }
+                },
 
             )
 
@@ -186,7 +187,7 @@ class ProfileListActivity : AppCompatActivity() {
 
 
                 binding.tvTotal.text =
-                    "Total Profiles : ${profiles.size}"
+                    getString(R.string.total_profiles, profiles.size)
 
 
 

@@ -36,7 +36,7 @@ class WelcomeActivity : AppCompatActivity() {
             startActivity(
                 Intent(
                     this,
-                    ProfileListActivity::class.java
+                    ProfileListActivity::class.java,
                 )
             )
 

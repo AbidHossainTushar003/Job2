@@ -4,8 +4,11 @@ package com.example.job2.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 
+import com.example.job2.R
 import com.example.job2.data.model.UserProfile
 import com.example.job2.databinding.ItemProfileBinding
 
@@ -17,15 +20,10 @@ class ProfileAdapter(
 
     private val onDeleteClick:(UserProfile)->Unit,
 
-    private val onProfileClick:(UserProfile)->Unit
+    private val onProfileClick:(UserProfile)->Unit,
 
 
-): RecyclerView.Adapter<ProfileAdapter.ProfileViewHolder>() {
-
-
-
-    private var profileList =
-        emptyList<UserProfile>()
+): ListAdapter<UserProfile, ProfileAdapter.ProfileViewHolder>(DiffCallback) {
 
 
 
@@ -64,35 +62,9 @@ class ProfileAdapter(
 
 
         holder.bind(
-            profileList[position]
+            getItem(position)
         )
 
-
-    }
-
-
-
-
-
-    override fun getItemCount(): Int {
-
-        return profileList.size
-
-    }
-
-
-
-
-
-
-
-    fun submitList(
-        list:List<UserProfile>
-    ){
-
-        profileList = list
-
-        notifyDataSetChanged()
 
     }
 
@@ -113,20 +85,20 @@ class ProfileAdapter(
         fun bind(
             profile:UserProfile
         ){
-
+            val context = binding.root.context
 
             binding.txtName.text =
-                profile.name
+                context.getString(R.string.display_name, profile.name)
 
 
 
             binding.txtEmail.text =
-                profile.email
+                context.getString(R.string.display_email, profile.email)
 
 
 
             binding.txtMobile.text =
-                profile.mobile
+                context.getString(R.string.display_mobile, profile.mobile)
 
 
 
@@ -169,6 +141,34 @@ class ProfileAdapter(
 
         }
 
+
+    }
+
+
+
+
+
+    companion object DiffCallback : DiffUtil.ItemCallback<UserProfile>() {
+
+        override fun areItemsTheSame(
+            oldItem: UserProfile,
+            newItem: UserProfile,
+        ): Boolean {
+
+            return oldItem.id == newItem.id
+
+        }
+
+
+
+        override fun areContentsTheSame(
+            oldItem: UserProfile,
+            newItem: UserProfile,
+        ): Boolean {
+
+            return oldItem == newItem
+
+        }
 
     }
 
