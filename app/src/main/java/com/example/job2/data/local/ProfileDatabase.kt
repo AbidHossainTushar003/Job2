@@ -8,16 +8,20 @@ import androidx.room.RoomDatabase
 import com.example.job2.data.model.UserProfile
 
 
-
+/**
+ * The Room database for the application.
+ * Manages the local persistence of [UserProfile] entities.
+ */
 @Database(
     entities = [UserProfile::class],
     version = 1,
     exportSchema = false,
 )
-
 abstract class ProfileDatabase:RoomDatabase(){
 
-
+    /**
+     * Provides access to the [ProfileDao].
+     */
     abstract fun profileDao():ProfileDao
 
 
@@ -29,7 +33,12 @@ abstract class ProfileDatabase:RoomDatabase(){
         private var INSTANCE:ProfileDatabase?=null
 
 
-
+        /**
+         * Gets the singleton instance of [ProfileDatabase].
+         *
+         * @param context The application context.
+         * @return The [ProfileDatabase] instance.
+         */
         fun getDatabase(
             context:Context
         ):ProfileDatabase{

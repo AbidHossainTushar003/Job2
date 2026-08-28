@@ -13,7 +13,14 @@ import com.example.job2.data.model.UserProfile
 import com.example.job2.databinding.ItemProfileBinding
 
 
-
+/**
+ * Adapter for the RecyclerView to display a list of [UserProfile] entities.
+ * Inherits from [ListAdapter] to handle list diffing on a background thread.
+ *
+ * @property onEditClick Callback function triggered when the edit button is clicked.
+ * @property onDeleteClick Callback function triggered when the delete button is clicked.
+ * @property onProfileClick Callback function triggered when a profile item is clicked.
+ */
 class ProfileAdapter(
 
     private val onEditClick:(UserProfile)->Unit,
@@ -28,7 +35,9 @@ class ProfileAdapter(
 
 
 
-
+    /**
+     * Creates a new [ProfileViewHolder] when the RecyclerView needs one.
+     */
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -54,7 +63,9 @@ class ProfileAdapter(
 
 
 
-
+    /**
+     * Binds the data at the specified position to the [holder].
+     */
     override fun onBindViewHolder(
         holder: ProfileViewHolder,
         position: Int
@@ -73,7 +84,11 @@ class ProfileAdapter(
 
 
 
-
+    /**
+     * ViewHolder for profile items in the RecyclerView.
+     *
+     * @property binding The binding object for the item layout.
+     */
     inner class ProfileViewHolder(
 
         private val binding:ItemProfileBinding
@@ -81,7 +96,11 @@ class ProfileAdapter(
     ):RecyclerView.ViewHolder(binding.root){
 
 
-
+        /**
+         * Binds a [UserProfile] to the views in the item layout.
+         *
+         * @param profile The user profile to display.
+         */
         fun bind(
             profile:UserProfile
         ){
@@ -147,9 +166,14 @@ class ProfileAdapter(
 
 
 
-
+    /**
+     * Callback for calculating the diff between two non-null items in a list.
+     */
     companion object DiffCallback : DiffUtil.ItemCallback<UserProfile>() {
 
+        /**
+         * Checks whether two objects represent the same item.
+         */
         override fun areItemsTheSame(
             oldItem: UserProfile,
             newItem: UserProfile,
@@ -160,7 +184,9 @@ class ProfileAdapter(
         }
 
 
-
+        /**
+         * Checks whether two items have the same data.
+         */
         override fun areContentsTheSame(
             oldItem: UserProfile,
             newItem: UserProfile,

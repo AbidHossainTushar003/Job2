@@ -9,19 +9,28 @@ import com.example.job2.data.model.UserProfile
 import com.example.job2.databinding.ActivitySingleProfileBinding
 
 
-
+/**
+ * Activity that displays the details of a single user profile.
+ */
 class SingleProfileActivity :
     AppCompatActivity(){
 
 
-
+    /**
+     * View binding for the activity layout.
+     */
     private lateinit var binding:
             ActivitySingleProfileBinding
 
 
 
 
-
+    /**
+     * Called when the activity is starting.
+     * Retrieves the profile from the intent and populates the UI.
+     *
+     * @param savedInstanceState If the activity is being re-initialized.
+     */
     override fun onCreate(
         savedInstanceState: Bundle?,
     ) {
